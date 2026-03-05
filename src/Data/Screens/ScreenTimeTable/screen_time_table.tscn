@@ -1,100 +1,72 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene format=3 uid="uid://yqxvsvgsbo3f"]
 
-[ext_resource path="res://Data/Fonts/FontMenu.tres" type="DynamicFont" id=1]
-[ext_resource path="res://Data/Screens/ScreenMultiFunctionDisplay/screen_mfd.png" type="Texture" id=2]
-[ext_resource path="res://Data/Screens/ScreenTimeTable/screen_time_table.gd" type="Script" id=3]
+[ext_resource type="FontFile" path="res://Data/Fonts/FontMenu.tres" id="1"]
+[ext_resource type="Texture2D" uid="uid://blcsn0mjd2ls4" path="res://Data/Screens/ScreenMultiFunctionDisplay/screen_mfd.png" id="2"]
+[ext_resource type="Script" uid="uid://dttvk4dv0i12c" path="res://Data/Screens/ScreenTimeTable/screen_time_table.gd" id="3"]
 
-[node name="ScreenRight" type="Node2D"]
-script = ExtResource( 3 )
+[node name="ScreenRight" type="Node2D" unique_id=503148455]
+script = ExtResource("3")
 
-[node name="Sprite" type="Sprite" parent="."]
-modulate = Color( 0, 0, 0, 1 )
-texture = ExtResource( 2 )
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1059923909]
+modulate = Color(0, 0, 0, 1)
+texture = ExtResource("2")
 centered = false
 
-[node name="CurrentStation" type="ColorRect" parent="."]
+[node name="CurrentStation" type="ColorRect" parent="." unique_id=1090340458]
 visible = false
-modulate = Color( 0, 0.356863, 0.482353, 1 )
-margin_left = -56.6533
-margin_top = 100.173
-margin_right = 1245.35
-margin_bottom = 194.173
-__meta__ = {
-"_edit_use_anchors_": false
-}
+modulate = Color(0, 0.356863, 0.482353, 1)
+offset_left = -56.6533
+offset_top = 100.173
+offset_right = 1245.35
+offset_bottom = 194.173
 
-[node name="Table" type="HBoxContainer" parent="."]
+[node name="Table" type="HBoxContainer" parent="." unique_id=2110866032]
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 1005.0
-margin_bottom = 800.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+offset_right = 1005.0
+offset_bottom = 800.0
 
-[node name="Arrival" type="VBoxContainer" parent="Table"]
-margin_right = 203.0
-margin_bottom = 800.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Arrival" type="VBoxContainer" parent="Table" unique_id=1932085533]
+layout_mode = 2
 
-[node name="Label" type="Label" parent="Table/Arrival"]
-margin_right = 203.0
-margin_bottom = 90.0
-custom_fonts/font = ExtResource( 1 )
+[node name="Label" type="Label" parent="Table/Arrival" unique_id=1226673989]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1")
 text = "ARRIVAL:"
-align = 1
+horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="Table/Arrival"]
-margin_top = 94.0
-margin_right = 203.0
-margin_bottom = 184.0
-custom_fonts/font = ExtResource( 1 )
-align = 1
+[node name="Label2" type="Label" parent="Table/Arrival" unique_id=1856932637]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1")
+horizontal_alignment = 1
 
-[node name="Departure" type="VBoxContainer" parent="Table"]
-margin_left = 207.0
-margin_right = 478.0
-margin_bottom = 800.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Departure" type="VBoxContainer" parent="Table" unique_id=621399555]
+layout_mode = 2
 
-[node name="Label" type="Label" parent="Table/Departure"]
-margin_right = 271.0
-margin_bottom = 90.0
-custom_fonts/font = ExtResource( 1 )
+[node name="Label" type="Label" parent="Table/Departure" unique_id=890327586]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1")
 text = "DEPARTURE:"
-align = 1
+horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="Table/Departure"]
-margin_top = 94.0
-margin_right = 271.0
-margin_bottom = 184.0
-custom_fonts/font = ExtResource( 1 )
-align = 1
+[node name="Label2" type="Label" parent="Table/Departure" unique_id=159049580]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1")
+horizontal_alignment = 1
 
-[node name="Station" type="VBoxContainer" parent="Table"]
-margin_left = 482.0
-margin_right = 1005.0
-margin_bottom = 800.0
-rect_clip_content = true
+[node name="Station" type="VBoxContainer" parent="Table" unique_id=860493452]
+clip_contents = true
+layout_mode = 2
 size_flags_horizontal = 3
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Label" type="Label" parent="Table/Station"]
-margin_right = 523.0
-margin_bottom = 90.0
-custom_fonts/font = ExtResource( 1 )
+[node name="Label" type="Label" parent="Table/Station" unique_id=564794525]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1")
 text = "STATION:"
-align = 1
+horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="Table/Station"]
-margin_top = 94.0
-margin_right = 523.0
-margin_bottom = 184.0
-custom_fonts/font = ExtResource( 1 )
-align = 1
+[node name="Label2" type="Label" parent="Table/Station" unique_id=136790040]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1")
+horizontal_alignment = 1

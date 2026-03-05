@@ -1,258 +1,243 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene format=3 uid="uid://db22hgdmkpn71"]
 
-[ext_resource path="res://Resources/SignalTypes/LightSignalMaterial.tres" type="Material" id=1]
-[ext_resource path="res://Resources/SignalTypes/Hl/Hl-Sig.obj" type="ArrayMesh" id=2]
-[ext_resource path="res://Resources/SignalTypes/Hl/Hl.gd" type="Script" id=3]
+[ext_resource type="Material" path="res://Resources/SignalTypes/LightSignalMaterial.tres" id="1"]
+[ext_resource type="ArrayMesh" uid="uid://b21l2hqp6hdf8" path="res://Resources/SignalTypes/Hl/Hl-Sig.obj" id="2"]
+[ext_resource type="Script" uid="uid://cmctoroaclnta" path="res://Resources/SignalTypes/Hl/Hl.gd" id="3"]
 
-[sub_resource type="SpatialMaterial" id=1]
-albedo_color = Color( 1, 0.658824, 0.00392157, 1 )
+[sub_resource type="StandardMaterial3D" id="1"]
+albedo_color = Color(1, 0.658824, 0.00392157, 1)
 emission_enabled = true
-emission = Color( 1, 0.513726, 0, 1 )
-emission_energy = 1.87
-emission_operator = 0
-emission_on_uv2 = false
+emission = Color(1, 0.513726, 0, 1)
+emission_energy_multiplier = 1.87
 
-[sub_resource type="SphereMesh" id=2]
+[sub_resource type="SphereMesh" id="2"]
 radius = 0.05
 height = 0.1
 
-[sub_resource type="SpatialMaterial" id=3]
-albedo_color = Color( 0.992157, 0.658824, 0.027451, 1 )
+[sub_resource type="StandardMaterial3D" id="3"]
+albedo_color = Color(0.992157, 0.658824, 0.027451, 1)
 emission_enabled = true
-emission = Color( 1, 0.843137, 0, 1 )
-emission_energy = 1.0
-emission_operator = 0
-emission_on_uv2 = false
+emission = Color(1, 0.843137, 0, 1)
 distance_fade_mode = 1
 distance_fade_min_distance = 70.0
 distance_fade_max_distance = 200.0
 
-[sub_resource type="SphereMesh" id=4]
+[sub_resource type="SphereMesh" id="4"]
 radius = 0.3
 height = 0.6
 radial_segments = 6
 rings = 3
 
-[sub_resource type="SpatialMaterial" id=5]
-albedo_color = Color( 0.00392157, 1, 0.0196078, 1 )
+[sub_resource type="StandardMaterial3D" id="5"]
+albedo_color = Color(0.00392157, 1, 0.0196078, 1)
 emission_enabled = true
-emission = Color( 0.196078, 1, 0, 1 )
-emission_energy = 1.87
-emission_operator = 0
-emission_on_uv2 = false
+emission = Color(0.196078, 1, 0, 1)
+emission_energy_multiplier = 1.87
 
-[sub_resource type="SpatialMaterial" id=6]
-albedo_color = Color( 0.0588235, 0.992157, 0.027451, 1 )
+[sub_resource type="StandardMaterial3D" id="6"]
+albedo_color = Color(0.0588235, 0.992157, 0.027451, 1)
 emission_enabled = true
-emission = Color( 0, 1, 0.0392157, 1 )
-emission_energy = 1.0
-emission_operator = 0
-emission_on_uv2 = false
+emission = Color(0, 1, 0.0392157, 1)
 distance_fade_mode = 1
 distance_fade_min_distance = 70.0
 distance_fade_max_distance = 200.0
 
-[sub_resource type="SpatialMaterial" id=7]
-albedo_color = Color( 1, 0.00392157, 0.00392157, 1 )
+[sub_resource type="StandardMaterial3D" id="7"]
+albedo_color = Color(1, 0.00392157, 0.00392157, 1)
 emission_enabled = true
-emission = Color( 1, 0, 0, 1 )
-emission_energy = 16.0
-emission_operator = 0
-emission_on_uv2 = false
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 16.0
 
-[sub_resource type="SphereMesh" id=8]
+[sub_resource type="SphereMesh" id="8"]
 radius = 0.05
 height = 0.1
 
-[sub_resource type="SpatialMaterial" id=9]
-albedo_color = Color( 0.992157, 0.0941176, 0.027451, 1 )
+[sub_resource type="StandardMaterial3D" id="9"]
+albedo_color = Color(0.992157, 0.0941176, 0.027451, 1)
 emission_enabled = true
-emission = Color( 1, 0, 0, 1 )
-emission_energy = 1.0
-emission_operator = 0
-emission_on_uv2 = false
+emission = Color(1, 0, 0, 1)
 distance_fade_mode = 1
 distance_fade_min_distance = 70.0
 distance_fade_max_distance = 200.0
 
-[sub_resource type="SphereMesh" id=10]
+[sub_resource type="SphereMesh" id="10"]
 radius = 0.3
 height = 0.6
 radial_segments = 6
 rings = 3
 
-[sub_resource type="BoxShape" id=11]
-extents = Vector3( 0.550892, 2.87686, 0.324287 )
+[sub_resource type="BoxShape3D" id="11"]
+size = Vector3(1.101784, 5.75372, 0.648574)
 
-[node name="VisualInstance" type="Spatial"]
-script = ExtResource( 3 )
+[node name="VisualInstance3D" type="Node3D" unique_id=996242019]
+script = ExtResource("3")
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.667 )
-material_override = ExtResource( 1 )
-mesh = ExtResource( 2 )
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2127181397]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.667)
+material_override = ExtResource("1")
+mesh = ExtResource("2")
 
-[node name="Orange2" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.098472, 3.58718, 1.85742 )
-material_override = SubResource( 1 )
+[node name="Orange2" type="MeshInstance3D" parent="." unique_id=1320247673]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.098472, 3.58718, 1.85742)
+material_override = SubResource("1")
 cast_shadow = 0
-mesh = SubResource( 2 )
+mesh = SubResource("2")
 
-[node name="MeshInstance2" type="MeshInstance" parent="Orange2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0 )
-material_override = SubResource( 3 )
-mesh = SubResource( 4 )
+[node name="MeshInstance2" type="MeshInstance3D" parent="Orange2" unique_id=645210966]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+material_override = SubResource("3")
+mesh = SubResource("4")
 
-[node name="Orange1" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.098472, 4.21936, 1.85742 )
-material_override = SubResource( 1 )
+[node name="Orange1" type="MeshInstance3D" parent="." unique_id=1890320257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.098472, 4.21936, 1.85742)
+material_override = SubResource("1")
 cast_shadow = 0
-mesh = SubResource( 2 )
+mesh = SubResource("2")
 
-[node name="MeshInstance2" type="MeshInstance" parent="Orange1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0 )
-material_override = SubResource( 3 )
-mesh = SubResource( 4 )
+[node name="MeshInstance2" type="MeshInstance3D" parent="Orange1" unique_id=1939705513]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+material_override = SubResource("3")
+mesh = SubResource("4")
 
-[node name="Green1" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0964804, 4.21856, 2.07726 )
-material_override = SubResource( 5 )
+[node name="Green1" type="MeshInstance3D" parent="." unique_id=765471575]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0964804, 4.21856, 2.07726)
+material_override = SubResource("5")
 cast_shadow = 0
-mesh = SubResource( 2 )
+mesh = SubResource("2")
 
-[node name="MeshInstance3" type="MeshInstance" parent="Green1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0 )
-material_override = SubResource( 6 )
-mesh = SubResource( 4 )
+[node name="MeshInstance3" type="MeshInstance3D" parent="Green1" unique_id=1772430367]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+material_override = SubResource("6")
+mesh = SubResource("4")
 
-[node name="Red" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0979431, 3.90113, 1.96757 )
-material_override = SubResource( 7 )
+[node name="Red" type="MeshInstance3D" parent="." unique_id=1134013135]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0979431, 3.90113, 1.96757)
+material_override = SubResource("7")
 cast_shadow = 0
-mesh = SubResource( 8 )
+mesh = SubResource("8")
 
-[node name="MeshInstance" type="MeshInstance" parent="Red"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0 )
-material_override = SubResource( 9 )
-mesh = SubResource( 10 )
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Red" unique_id=1995216522]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+material_override = SubResource("9")
+mesh = SubResource("10")
 
-[node name="GreenStripe" type="Spatial" parent="."]
+[node name="GreenStripe" type="Node3D" parent="." unique_id=2096322184]
 
-[node name="Green1" type="MeshInstance" parent="GreenStripe"]
-transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.0964804, 3.33877, 1.77063 )
-material_override = SubResource( 5 )
+[node name="Green1" type="MeshInstance3D" parent="GreenStripe" unique_id=1365559949]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.0964804, 3.33877, 1.77063)
+material_override = SubResource("5")
 cast_shadow = 0
-mesh = SubResource( 2 )
+mesh = SubResource("2")
 
-[node name="MeshInstance3" type="MeshInstance" parent="GreenStripe/Green1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0 )
-material_override = SubResource( 6 )
-mesh = SubResource( 4 )
+[node name="MeshInstance3" type="MeshInstance3D" parent="GreenStripe/Green1" unique_id=365380751]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+material_override = SubResource("6")
+mesh = SubResource("4")
 
-[node name="Green2" type="MeshInstance" parent="GreenStripe"]
-transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.0964804, 3.33877, 1.87091 )
-material_override = SubResource( 5 )
+[node name="Green2" type="MeshInstance3D" parent="GreenStripe" unique_id=1461817408]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.0964804, 3.33877, 1.87091)
+material_override = SubResource("5")
 cast_shadow = 0
-mesh = SubResource( 2 )
+mesh = SubResource("2")
 
-[node name="MeshInstance3" type="MeshInstance" parent="GreenStripe/Green2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0 )
-material_override = SubResource( 6 )
-mesh = SubResource( 4 )
+[node name="MeshInstance3" type="MeshInstance3D" parent="GreenStripe/Green2" unique_id=2119938912]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+material_override = SubResource("6")
+mesh = SubResource("4")
 
-[node name="Green3" type="MeshInstance" parent="GreenStripe"]
-transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.0964804, 3.33877, 1.9712 )
-material_override = SubResource( 5 )
+[node name="Green3" type="MeshInstance3D" parent="GreenStripe" unique_id=867367938]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.0964804, 3.33877, 1.9712)
+material_override = SubResource("5")
 cast_shadow = 0
-mesh = SubResource( 2 )
+mesh = SubResource("2")
 
-[node name="MeshInstance3" type="MeshInstance" parent="GreenStripe/Green3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0 )
-material_override = SubResource( 6 )
-mesh = SubResource( 4 )
+[node name="MeshInstance3" type="MeshInstance3D" parent="GreenStripe/Green3" unique_id=307756196]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+material_override = SubResource("6")
+mesh = SubResource("4")
 
-[node name="Green4" type="MeshInstance" parent="GreenStripe"]
-transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.0964804, 3.33877, 2.07089 )
-material_override = SubResource( 5 )
+[node name="Green4" type="MeshInstance3D" parent="GreenStripe" unique_id=1044340096]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.0964804, 3.33877, 2.07089)
+material_override = SubResource("5")
 cast_shadow = 0
-mesh = SubResource( 2 )
+mesh = SubResource("2")
 
-[node name="MeshInstance3" type="MeshInstance" parent="GreenStripe/Green4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0 )
-material_override = SubResource( 6 )
-mesh = SubResource( 4 )
+[node name="MeshInstance3" type="MeshInstance3D" parent="GreenStripe/Green4" unique_id=1120357012]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+material_override = SubResource("6")
+mesh = SubResource("4")
 
-[node name="Green5" type="MeshInstance" parent="GreenStripe"]
-transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.0964804, 3.33877, 2.17117 )
-material_override = SubResource( 5 )
+[node name="Green5" type="MeshInstance3D" parent="GreenStripe" unique_id=1013090201]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.0964804, 3.33877, 2.17117)
+material_override = SubResource("5")
 cast_shadow = 0
-mesh = SubResource( 2 )
+mesh = SubResource("2")
 
-[node name="MeshInstance3" type="MeshInstance" parent="GreenStripe/Green5"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0 )
-material_override = SubResource( 6 )
-mesh = SubResource( 4 )
+[node name="MeshInstance3" type="MeshInstance3D" parent="GreenStripe/Green5" unique_id=56664259]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+material_override = SubResource("6")
+mesh = SubResource("4")
 
-[node name="OrangeStripe" type="Spatial" parent="."]
+[node name="OrangeStripe" type="Node3D" parent="." unique_id=814226877]
 
-[node name="Orange1" type="MeshInstance" parent="OrangeStripe"]
-transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.098472, 3.2067, 1.77121 )
-material_override = SubResource( 1 )
+[node name="Orange1" type="MeshInstance3D" parent="OrangeStripe" unique_id=1753941657]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.098472, 3.2067, 1.77121)
+material_override = SubResource("1")
 cast_shadow = 0
-mesh = SubResource( 2 )
+mesh = SubResource("2")
 
-[node name="MeshInstance2" type="MeshInstance" parent="OrangeStripe/Orange1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0 )
-material_override = SubResource( 3 )
-mesh = SubResource( 4 )
+[node name="MeshInstance2" type="MeshInstance3D" parent="OrangeStripe/Orange1" unique_id=404904850]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+material_override = SubResource("3")
+mesh = SubResource("4")
 
-[node name="Orange2" type="MeshInstance" parent="OrangeStripe"]
-transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.098472, 3.2067, 1.87094 )
-material_override = SubResource( 1 )
+[node name="Orange2" type="MeshInstance3D" parent="OrangeStripe" unique_id=492639084]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.098472, 3.2067, 1.87094)
+material_override = SubResource("1")
 cast_shadow = 0
-mesh = SubResource( 2 )
+mesh = SubResource("2")
 
-[node name="MeshInstance2" type="MeshInstance" parent="OrangeStripe/Orange2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0 )
-material_override = SubResource( 3 )
-mesh = SubResource( 4 )
+[node name="MeshInstance2" type="MeshInstance3D" parent="OrangeStripe/Orange2" unique_id=73618858]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+material_override = SubResource("3")
+mesh = SubResource("4")
 
-[node name="Orange3" type="MeshInstance" parent="OrangeStripe"]
-transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.098472, 3.2067, 1.97067 )
-material_override = SubResource( 1 )
+[node name="Orange3" type="MeshInstance3D" parent="OrangeStripe" unique_id=1386604652]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.098472, 3.2067, 1.97067)
+material_override = SubResource("1")
 cast_shadow = 0
-mesh = SubResource( 2 )
+mesh = SubResource("2")
 
-[node name="MeshInstance2" type="MeshInstance" parent="OrangeStripe/Orange3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0 )
-material_override = SubResource( 3 )
-mesh = SubResource( 4 )
+[node name="MeshInstance2" type="MeshInstance3D" parent="OrangeStripe/Orange3" unique_id=560644540]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+material_override = SubResource("3")
+mesh = SubResource("4")
 
-[node name="Orange4" type="MeshInstance" parent="OrangeStripe"]
-transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.098472, 3.2067, 2.0704 )
-material_override = SubResource( 1 )
+[node name="Orange4" type="MeshInstance3D" parent="OrangeStripe" unique_id=843362743]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.098472, 3.2067, 2.0704)
+material_override = SubResource("1")
 cast_shadow = 0
-mesh = SubResource( 2 )
+mesh = SubResource("2")
 
-[node name="MeshInstance2" type="MeshInstance" parent="OrangeStripe/Orange4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0 )
-material_override = SubResource( 3 )
-mesh = SubResource( 4 )
+[node name="MeshInstance2" type="MeshInstance3D" parent="OrangeStripe/Orange4" unique_id=696988230]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+material_override = SubResource("3")
+mesh = SubResource("4")
 
-[node name="Orange5" type="MeshInstance" parent="OrangeStripe"]
-transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.098472, 3.2067, 2.17013 )
-material_override = SubResource( 1 )
+[node name="Orange5" type="MeshInstance3D" parent="OrangeStripe" unique_id=2022110684]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.098472, 3.2067, 2.17013)
+material_override = SubResource("1")
 cast_shadow = 0
-mesh = SubResource( 2 )
+mesh = SubResource("2")
 
-[node name="MeshInstance2" type="MeshInstance" parent="OrangeStripe/Orange5"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0 )
-material_override = SubResource( 3 )
-mesh = SubResource( 4 )
+[node name="MeshInstance2" type="MeshInstance3D" parent="OrangeStripe/Orange5" unique_id=1941608837]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+material_override = SubResource("3")
+mesh = SubResource("4")
 
-[node name="SelectCollider" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37803, -1.33251, 1.65292 )
+[node name="SelectCollider" type="StaticBody3D" parent="." unique_id=226884457]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37803, -1.33251, 1.65292)
 
-[node name="AabbShape" type="CollisionShape" parent="SelectCollider"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.550892, 2.87686, 0.324287 )
-shape = SubResource( 11 )
+[node name="AabbShape" type="CollisionShape3D" parent="SelectCollider" unique_id=1037745025]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.550892, 2.87686, 0.324287)
+shape = SubResource("11")

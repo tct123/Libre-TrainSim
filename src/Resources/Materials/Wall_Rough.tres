@@ -1,7 +1,7 @@
-[gd_resource type="SpatialMaterial" load_steps=2 format=2]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ckaliohx3twms"]
 
-[ext_resource path="res://Resources/Textures/Wall_Rough.png" type="Texture" id=1]
+[ext_resource type="Texture2D" uid="uid://t7g1nnqls2wm" path="res://Resources/Textures/Wall_Rough.png" id="1"]
 
 [resource]
-albedo_texture = ExtResource( 1 )
+albedo_texture = ExtResource("1")
 roughness = 0.89

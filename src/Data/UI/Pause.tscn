@@ -1,110 +1,84 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene format=3 uid="uid://gkx6fhrrik50"]
 
-[ext_resource path="res://Data/UI/styles/button_both.tres" type="Theme" id=1]
-[ext_resource path="res://Data/UI/pause.gd" type="Script" id=2]
-[ext_resource path="res://Data/UI/station_jumper.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Data/UI/blur.gdshader" type="Shader" id=4]
+[ext_resource type="Theme" path="res://Data/UI/styles/button_both.tres" id="1"]
+[ext_resource type="Script" uid="uid://bho6jbyr57rtq" path="res://Data/UI/pause.gd" id="2"]
+[ext_resource type="PackedScene" path="res://Data/UI/station_jumper.tscn" id="3"]
+[ext_resource type="Shader" uid="uid://dd310i5eypm30" path="res://Data/UI/blur.gdshader" id="4"]
 
-[sub_resource type="ShaderMaterial" id=1]
-shader = ExtResource( 4 )
-shader_param/blur_amount = 1.747
-shader_param/tint_color = Color( 0.42, 0.42, 0.42, 1 )
+[sub_resource type="ShaderMaterial" id="1"]
+shader = ExtResource("4")
 
-[node name="Pause" type="Control"]
+[node name="Pause" type="Control" unique_id=1010261313]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 2 )
+script = ExtResource("2")
 
-[node name="Background" type="ColorRect" parent="."]
-modulate = Color( 1, 1, 1, 0.564706 )
-material = SubResource( 1 )
+[node name="Background" type="ColorRect" parent="." unique_id=1088387393]
+modulate = Color(1, 1, 1, 0.564706)
+material = SubResource("1")
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0, 0, 0, 0.564706 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+color = Color(0, 0, 0, 0.564706)
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=2086625495]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="HBox" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 365.0
-margin_top = 118.0
-margin_right = 659.0
-margin_bottom = 481.0
-theme = ExtResource( 1 )
+[node name="HBox" type="VBoxContainer" parent="CenterContainer" unique_id=1722999755]
+layout_mode = 2
+theme = ExtResource("1")
 alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Label" type="Label" parent="CenterContainer/HBox"]
-margin_right = 294.0
-margin_bottom = 45.0
+[node name="Label" type="Label" parent="CenterContainer/HBox" unique_id=1995558735]
+layout_mode = 2
 text = "PAUSE"
-align = 1
+horizontal_alignment = 1
 
-[node name="Back" type="Button" parent="CenterContainer/HBox"]
-margin_top = 49.0
-margin_right = 294.0
-margin_bottom = 98.0
+[node name="Back" type="Button" parent="CenterContainer/HBox" unique_id=934338129]
+layout_mode = 2
 text = "BACK"
 
-[node name="RestartScenario" type="Button" parent="CenterContainer/HBox"]
-margin_top = 102.0
-margin_right = 294.0
-margin_bottom = 151.0
+[node name="RestartScenario" type="Button" parent="CenterContainer/HBox" unique_id=750008250]
+layout_mode = 2
 text = "RESTART_SCENARIO"
 
-[node name="JumpToStation" type="Button" parent="CenterContainer/HBox"]
-margin_top = 155.0
-margin_right = 294.0
-margin_bottom = 204.0
+[node name="JumpToStation" type="Button" parent="CenterContainer/HBox" unique_id=1732061133]
+layout_mode = 2
 text = "JUMP_TO_STATION"
 
-[node name="Settings" type="Button" parent="CenterContainer/HBox"]
-margin_top = 208.0
-margin_right = 294.0
-margin_bottom = 257.0
+[node name="Settings" type="Button" parent="CenterContainer/HBox" unique_id=1675408010]
+layout_mode = 2
 text = "MENU_SETTINGS"
 
-[node name="BackToTrackEditor" type="Button" parent="CenterContainer/HBox"]
+[node name="BackToTrackEditor" type="Button" parent="CenterContainer/HBox" unique_id=1462790865]
 visible = false
-margin_top = 367.0
-margin_right = 347.0
-margin_bottom = 416.0
+layout_mode = 2
 text = "BACK_TO_TRACK_EDITOR"
 
-[node name="BackToScenarioEditor" type="Button" parent="CenterContainer/HBox"]
+[node name="BackToScenarioEditor" type="Button" parent="CenterContainer/HBox" unique_id=2067737160]
 visible = false
-margin_top = 367.0
-margin_right = 385.0
-margin_bottom = 416.0
+layout_mode = 2
 text = "BACK_TO_SCENARIO_EDITOR"
 
-[node name="QuitMenu" type="Button" parent="CenterContainer/HBox"]
-margin_top = 261.0
-margin_right = 294.0
-margin_bottom = 310.0
+[node name="QuitMenu" type="Button" parent="CenterContainer/HBox" unique_id=1743328153]
+layout_mode = 2
 text = "QUIT_TO_MENU"
 
-[node name="QuitOS" type="Button" parent="CenterContainer/HBox"]
-margin_top = 314.0
-margin_right = 294.0
-margin_bottom = 363.0
+[node name="QuitOS" type="Button" parent="CenterContainer/HBox" unique_id=1198236520]
+layout_mode = 2
 text = "EXIT_GAME"
 
-[node name="StationJumper" parent="." instance=ExtResource( 3 )]
+[node name="StationJumper" parent="." unique_id=1510864855 instance=ExtResource("3")]
 visible = false
-margin_left = 12.0
-margin_top = 12.0
-margin_right = -12.0
-margin_bottom = -12.0
+layout_mode = 0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
 
 [connection signal="pressed" from="CenterContainer/HBox/Back" to="." method="_on_Back_pressed"]
 [connection signal="pressed" from="CenterContainer/HBox/RestartScenario" to="." method="_on_RestartScenario_pressed"]
@@ -114,4 +88,3 @@ margin_bottom = -12.0
 [connection signal="pressed" from="CenterContainer/HBox/BackToScenarioEditor" to="." method="_on_BackToScenarioEditor_pressed"]
 [connection signal="pressed" from="CenterContainer/HBox/QuitMenu" to="." method="_on_QuitMenu_pressed"]
 [connection signal="pressed" from="CenterContainer/HBox/QuitOS" to="." method="_on_Quit_pressed"]
-[connection signal="station_index_selected" from="StationJumper" to="." method="_on_StationJumper_station_index_selected"]

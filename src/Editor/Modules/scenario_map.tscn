@@ -1,18 +1,17 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene format=3 uid="uid://bcdgw3l6n7q6q"]
 
-[ext_resource path="res://Editor/Scripts/scenario_map.gd" type="Script" id=1]
+[ext_resource type="Script" uid="uid://dj0b5aiccqowt" path="res://Editor/Scripts/scenario_map.gd" id="1"]
 
-[node name="ScenarioMap" type="Node"]
-script = ExtResource( 1 )
+[node name="ScenarioMap" type="Node" unique_id=1519099130]
+script = ExtResource("1")
 
-[node name="Rails" type="Node2D" parent="."]
+[node name="Rails" type="Node2D" parent="." unique_id=852389209]
 
-[node name="RailsSelection" type="Node2D" parent="."]
+[node name="RailsSelection" type="Node2D" parent="." unique_id=25363730]
 
-[node name="Signals" type="Node2D" parent="."]
+[node name="Signals" type="Node2D" parent="." unique_id=419855142]
 
-[node name="Special" type="Node2D" parent="."]
+[node name="Special" type="Node2D" parent="." unique_id=1496035919]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 399.596, 303.065 )
-current = true
+[node name="Camera2D" type="Camera2D" parent="." unique_id=334266768]
+position = Vector2(399.596, 303.065)

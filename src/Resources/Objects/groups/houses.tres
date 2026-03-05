@@ -1,18 +1,15 @@
-[gd_resource type="Resource" load_steps=8 format=2]
+[gd_resource type="Resource" script_class="ObjectGroup" format=3 uid="uid://dtpjud2228ie3"]
 
-[ext_resource path="res://Data/Scripts/Resources/object_group.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Objects/houses/house_7.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Resources/Objects/houses/house_3.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Resources/Objects/houses/house_4.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Resources/Objects/houses/house_1.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Resources/Objects/houses/house_2.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Resources/Objects/houses/house_6.tscn" type="PackedScene" id=7]
+[ext_resource type="Script" uid="uid://gwpk0uqrppag" path="res://Data/Scripts/Resources/object_group.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://cbr7t5n4scnie" path="res://Resources/Objects/houses/house_7.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://di6nxexvkwl2i" path="res://Resources/Objects/houses/house_3.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://ed7p6u8qufg7" path="res://Resources/Objects/houses/house_4.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://cdlr8fjlietew" path="res://Resources/Objects/houses/house_1.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://sgsljmilw6mk" path="res://Resources/Objects/houses/house_2.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://bnjxiscmwgk33" path="res://Resources/Objects/houses/house_6.tscn" id="7"]
 
 [resource]
-script = ExtResource( 1 )
+script = ExtResource("1")
 group_name = "Houses"
-scenes = [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 2 ) ]
+scenes = [ExtResource("5"), ExtResource("6"), ExtResource("3"), ExtResource("4"), ExtResource("7"), ExtResource("2")]
 is_building = true
-is_vegetation = false
-is_infrastructure = false
-is_decorative = false

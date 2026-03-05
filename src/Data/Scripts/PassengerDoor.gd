@@ -1,6 +1,6 @@
 extends PassengerPathNode
 
-export (DoorSide.TypeHint) var side := DoorSide.UNASSIGNED
+@export var side := DoorSide.UNASSIGNED # (DoorSide.TypeHint)
 
 func _init() -> void:
 	type = Type.DOOR

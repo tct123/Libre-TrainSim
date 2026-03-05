@@ -1,56 +1,41 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene format=3 uid="uid://ckcat1v0fjfup"]
 
-[ext_resource path="res://Editor/Docks/RailAttachments/RailAttachments.gd" type="Script" id=1]
-[ext_resource path="res://Editor/Modules/building_settings.tscn" type="PackedScene" id=2]
-[ext_resource path="res://addons/jean28518.jTools/jList/jList.tscn" type="PackedScene" id=3]
+[ext_resource type="Script" uid="uid://lw837vd3gfjh" path="res://Editor/Docks/RailAttachments/RailAttachments.gd" id="1"]
+[ext_resource type="PackedScene" path="res://Editor/Modules/building_settings.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://1k4w4s6lmql7" path="res://addons/jean28518.jTools/jList/jList.tscn" id="3"]
 
-[node name="Rail Attachments" type="VBoxContainer"]
+[node name="Rail Attachments" type="VBoxContainer" unique_id=1294002364]
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 1 )
+script = ExtResource("1")
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CurrentRail" type="HBoxContainer" parent="."]
-margin_right = 1024.0
-margin_bottom = 24.0
+[node name="CurrentRail" type="HBoxContainer" parent="." unique_id=1964085136]
+layout_mode = 2
 
-[node name="Name" type="LineEdit" parent="CurrentRail"]
-margin_right = 1024.0
-margin_bottom = 24.0
+[node name="Name" type="LineEdit" parent="CurrentRail" unique_id=79651890]
+layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Tab" type="TabContainer" parent="."]
-margin_top = 28.0
-margin_right = 1024.0
-margin_bottom = 388.0
-tab_align = 0
+[node name="Tab" type="TabContainer" parent="." unique_id=1320206985]
+layout_mode = 2
+current_tab = 0
 
-[node name="TrackObjects" type="VBoxContainer" parent="Tab"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 32.0
-margin_right = -4.0
-margin_bottom = -4.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="TrackObjects" type="VBoxContainer" parent="Tab" unique_id=420212206]
+layout_mode = 2
+metadata/_tab_index = 0
 
-[node name="Label" type="Label" parent="Tab/TrackObjects"]
-margin_right = 1016.0
-margin_bottom = 14.0
+[node name="Label" type="Label" parent="Tab/TrackObjects" unique_id=1529092243]
+layout_mode = 2
 text = "Track Objects:"
-align = 1
+horizontal_alignment = 1
 
-[node name="jListTrackObjects" parent="Tab/TrackObjects" instance=ExtResource( 3 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 18.0
-margin_right = 1016.0
-margin_bottom = 168.0
-rect_min_size = Vector2( 0, 150 )
+[node name="jListTrackObjects" parent="Tab/TrackObjects" unique_id=58562891 instance=ExtResource("3")]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
 enable_rename_button = true
 enable_duplicate_button = true
 enable_copy_button = true
@@ -58,466 +43,261 @@ enable_paste_button = true
 add_button_text = "New"
 remove_button_text = "Delete"
 
-[node name="MirrorPastedObjects" type="CheckBox" parent="Tab/TrackObjects"]
-margin_top = 172.0
-margin_right = 1016.0
-margin_bottom = 196.0
+[node name="MirrorPastedObjects" type="CheckBox" parent="Tab/TrackObjects" unique_id=1664510315]
+layout_mode = 2
 text = "Mirror track objects (while pasting)"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Settings" type="VBoxContainer" parent="Tab/TrackObjects"]
-margin_top = 200.0
-margin_right = 1016.0
-margin_bottom = 324.0
+[node name="Settings" type="VBoxContainer" parent="Tab/TrackObjects" unique_id=571314145]
+layout_mode = 2
 
-[node name="Tab" type="TabContainer" parent="Tab/TrackObjects/Settings"]
-margin_right = 1016.0
-margin_bottom = 124.0
+[node name="Tab" type="TabContainer" parent="Tab/TrackObjects/Settings" unique_id=1864233845]
+layout_mode = 2
+current_tab = 0
 
-[node name="Object" type="VBoxContainer" parent="Tab/TrackObjects/Settings/Tab"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 32.0
-margin_right = -4.0
-margin_bottom = -4.0
+[node name="Object" type="VBoxContainer" parent="Tab/TrackObjects/Settings/Tab" unique_id=590579270]
+layout_mode = 2
+metadata/_tab_index = 0
 
-[node name="Label" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object"]
-margin_right = 1008.0
-margin_bottom = 14.0
+[node name="Label" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object" unique_id=519091083]
+layout_mode = 2
 text = "Object: (.obj)"
-align = 1
+horizontal_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Tab/TrackObjects/Settings/Tab/Object"]
-margin_top = 18.0
-margin_right = 1008.0
-margin_bottom = 42.0
+[node name="HBoxContainer" type="HBoxContainer" parent="Tab/TrackObjects/Settings/Tab/Object" unique_id=356690931]
+layout_mode = 2
 
-[node name="LineEdit" type="LineEdit" parent="Tab/TrackObjects/Settings/Tab/Object/HBoxContainer"]
-margin_right = 966.0
-margin_bottom = 24.0
+[node name="LineEdit" type="LineEdit" parent="Tab/TrackObjects/Settings/Tab/Object/HBoxContainer" unique_id=297064676]
+layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Pick" type="Button" parent="Tab/TrackObjects/Settings/Tab/Object/HBoxContainer"]
-margin_left = 970.0
-margin_right = 1008.0
-margin_bottom = 24.0
+[node name="Pick" type="Button" parent="Tab/TrackObjects/Settings/Tab/Object/HBoxContainer" unique_id=1313473270]
+layout_mode = 2
 text = "Pick"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Label2" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object"]
-margin_top = 46.0
-margin_right = 1008.0
-margin_bottom = 60.0
+[node name="Label2" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object" unique_id=1208655884]
+layout_mode = 2
 size_flags_horizontal = 3
 text = "Materials:"
-align = 1
+horizontal_alignment = 1
 
-[node name="BuildingSettings" parent="Tab/TrackObjects/Settings/Tab/Object" instance=ExtResource( 2 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 64.0
-margin_right = 1008.0
-margin_bottom = 88.0
+[node name="BuildingSettings" parent="Tab/TrackObjects/Settings/Tab/Object" unique_id=641170299 instance=ExtResource("2")]
+layout_mode = 2
 
-[node name="Position" type="VBoxContainer" parent="Tab/TrackObjects/Settings/Tab"]
+[node name="Position" type="VBoxContainer" parent="Tab/TrackObjects/Settings/Tab" unique_id=178160380]
 visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 32.0
-margin_right = -4.0
-margin_bottom = -4.0
+layout_mode = 2
+metadata/_tab_index = 1
 
-[node name="WholeRail" type="CheckBox" parent="Tab/TrackObjects/Settings/Tab/Position"]
-margin_right = 1008.0
-margin_bottom = 24.0
+[node name="WholeRail" type="CheckBox" parent="Tab/TrackObjects/Settings/Tab/Position" unique_id=1094786263]
+layout_mode = 2
 text = "Assign Whole Rail"
 
-[node name="StartPos" type="HBoxContainer" parent="Tab/TrackObjects/Settings/Tab/Position"]
-margin_top = 28.0
-margin_right = 1008.0
-margin_bottom = 52.0
+[node name="StartPos" type="HBoxContainer" parent="Tab/TrackObjects/Settings/Tab/Position" unique_id=379659724]
+layout_mode = 2
 
-[node name="Label" type="Label" parent="Tab/TrackObjects/Settings/Tab/Position/StartPos"]
-margin_top = 5.0
-margin_right = 89.0
-margin_bottom = 19.0
+[node name="Label" type="Label" parent="Tab/TrackObjects/Settings/Tab/Position/StartPos" unique_id=1244580873]
+layout_mode = 2
 text = "Start Position:"
 
-[node name="SpinBox" type="SpinBox" parent="Tab/TrackObjects/Settings/Tab/Position/StartPos"]
-margin_left = 93.0
-margin_right = 1008.0
-margin_bottom = 24.0
+[node name="SpinBox" type="SpinBox" parent="Tab/TrackObjects/Settings/Tab/Position/StartPos" unique_id=659218594]
+layout_mode = 2
 size_flags_horizontal = 3
 max_value = 1000.0
 step = 0.01
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="EndPosition" type="HBoxContainer" parent="Tab/TrackObjects/Settings/Tab/Position"]
-margin_top = 56.0
-margin_right = 1008.0
-margin_bottom = 80.0
+[node name="EndPosition" type="HBoxContainer" parent="Tab/TrackObjects/Settings/Tab/Position" unique_id=41885888]
+layout_mode = 2
 
-[node name="Label" type="Label" parent="Tab/TrackObjects/Settings/Tab/Position/EndPosition"]
-margin_top = 5.0
-margin_right = 83.0
-margin_bottom = 19.0
+[node name="Label" type="Label" parent="Tab/TrackObjects/Settings/Tab/Position/EndPosition" unique_id=461279588]
+layout_mode = 2
 text = "End Position:"
 
-[node name="SpinBox" type="SpinBox" parent="Tab/TrackObjects/Settings/Tab/Position/EndPosition"]
-margin_left = 87.0
-margin_right = 1008.0
-margin_bottom = 24.0
+[node name="SpinBox" type="SpinBox" parent="Tab/TrackObjects/Settings/Tab/Position/EndPosition" unique_id=2115982158]
+layout_mode = 2
 size_flags_horizontal = 3
 max_value = 1000.0
 step = 0.01
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="SaveAndUpdate" type="Button" parent="Tab/TrackObjects/Settings/Tab/Position"]
-margin_left = 483.0
-margin_top = 84.0
-margin_right = 524.0
-margin_bottom = 104.0
+[node name="SaveAndUpdate" type="Button" parent="Tab/TrackObjects/Settings/Tab/Position" unique_id=1348074451]
+layout_mode = 2
 size_flags_horizontal = 4
 text = "Save & Update"
 
-[node name="Object Positioning" type="VBoxContainer" parent="Tab/TrackObjects/Settings/Tab"]
+[node name="Object Positioning" type="VBoxContainer" parent="Tab/TrackObjects/Settings/Tab" unique_id=923321325]
 visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 32.0
-margin_right = -4.0
-margin_bottom = -4.0
+layout_mode = 2
+metadata/_tab_index = 2
 
-[node name="OptionButton" type="OptionButton" parent="Tab/TrackObjects/Settings/Tab/Object Positioning"]
-margin_right = 1008.0
-margin_bottom = 20.0
-text = "No Side"
-align = 1
-items = [ "No Side", null, false, 0, null, "Left", null, false, 1, null, "Right", null, false, 2, null, "Both Sides", null, false, 3, null ]
-selected = 0
+[node name="OptionButton" type="OptionButton" parent="Tab/TrackObjects/Settings/Tab/Object Positioning" unique_id=2114650817]
+layout_mode = 2
 
-[node name="GridContainer" type="GridContainer" parent="Tab/TrackObjects/Settings/Tab/Object Positioning"]
-margin_top = 24.0
-margin_right = 1008.0
-margin_bottom = 104.0
+[node name="GridContainer" type="GridContainer" parent="Tab/TrackObjects/Settings/Tab/Object Positioning" unique_id=112701379]
+layout_mode = 2
 columns = 4
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Label" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer"]
-margin_top = 5.0
-margin_right = 104.0
-margin_bottom = 19.0
+[node name="Label" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer" unique_id=1285158339]
+layout_mode = 2
 text = "Spacing Straight:"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Straight" type="SpinBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer"]
-margin_left = 108.0
-margin_right = 495.0
-margin_bottom = 24.0
+[node name="Straight" type="SpinBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer" unique_id=1165838694]
+layout_mode = 2
 size_flags_horizontal = 3
 max_value = 1000.0
 step = 0.01
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Label2" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer"]
-margin_left = 499.0
-margin_top = 5.0
-margin_right = 616.0
-margin_bottom = 19.0
+[node name="Label2" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer" unique_id=373440335]
+layout_mode = 2
 text = "Spacing Left/Right:"
 
-[node name="LeftRight" type="SpinBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer"]
-margin_left = 620.0
-margin_right = 1007.0
-margin_bottom = 24.0
+[node name="LeftRight" type="SpinBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer" unique_id=393991438]
+layout_mode = 2
 size_flags_horizontal = 3
 max_value = 1000.0
 step = 0.01
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Label3" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer"]
-margin_top = 33.0
-margin_right = 104.0
-margin_bottom = 47.0
+[node name="Label3" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer" unique_id=917191109]
+layout_mode = 2
 text = "Shift Left/Right:"
 
-[node name="Shift" type="SpinBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer"]
-margin_left = 108.0
-margin_top = 28.0
-margin_right = 495.0
-margin_bottom = 52.0
+[node name="Shift" type="SpinBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer" unique_id=2018303805]
+layout_mode = 2
 size_flags_horizontal = 3
 max_value = 1000.0
 step = 0.01
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Label4" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer"]
-margin_left = 499.0
-margin_top = 33.0
-margin_right = 616.0
-margin_bottom = 47.0
+[node name="Label4" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer" unique_id=137932082]
+layout_mode = 2
 text = "Spawn Rate:"
 
-[node name="SpawnRate" type="SpinBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer"]
-margin_left = 620.0
-margin_top = 28.0
-margin_right = 1007.0
-margin_bottom = 52.0
+[node name="SpawnRate" type="SpinBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer" unique_id=992043538]
+layout_mode = 2
 size_flags_horizontal = 3
 max_value = 1.0
 step = 0.01
 value = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Label5" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer"]
-margin_top = 61.0
-margin_right = 104.0
-margin_bottom = 75.0
+[node name="Label5" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer" unique_id=1926795468]
+layout_mode = 2
 text = "Rows:"
 
-[node name="Rows" type="SpinBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer"]
-margin_left = 108.0
-margin_top = 56.0
-margin_right = 495.0
-margin_bottom = 80.0
+[node name="Rows" type="SpinBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer" unique_id=72836383]
+layout_mode = 2
 size_flags_horizontal = 3
 min_value = 1.0
 step = 0.01
 value = 1.0
 allow_greater = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Label6" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer"]
-margin_left = 499.0
-margin_top = 61.0
-margin_right = 616.0
-margin_bottom = 75.0
+[node name="Label6" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer" unique_id=789652337]
+layout_mode = 2
 text = "Height:"
 
-[node name="Height" type="SpinBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer"]
-margin_left = 620.0
-margin_top = 56.0
-margin_right = 1007.0
-margin_bottom = 80.0
+[node name="Height" type="SpinBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer" unique_id=28765863]
+layout_mode = 2
 size_flags_horizontal = 3
 min_value = -100.0
 step = 0.01
 allow_greater = true
 allow_lesser = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Label7" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer"]
-margin_left = 499.0
-margin_top = 61.0
-margin_right = 616.0
-margin_bottom = 75.0
+[node name="Label7" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer" unique_id=1827986233]
+layout_mode = 2
 text = "Rotation:"
 
-[node name="Rotation" type="SpinBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer"]
-margin_left = 620.0
-margin_top = 56.0
-margin_right = 1007.0
-margin_bottom = 80.0
+[node name="Rotation" type="SpinBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer" unique_id=1468576693]
+layout_mode = 2
 size_flags_horizontal = 3
 max_value = 360.0
 step = 0.01
 allow_greater = true
 allow_lesser = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Label8" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer"]
-margin_left = 146.0
-margin_top = 145.0
-margin_right = 281.0
-margin_bottom = 159.0
+[node name="Label8" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer" unique_id=1660135040]
+layout_mode = 2
 text = "Place Last:"
 
-[node name="PlaceLast" type="CheckBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer"]
-margin_left = 285.0
-margin_top = 140.0
-margin_right = 1008.0
-margin_bottom = 164.0
+[node name="PlaceLast" type="CheckBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer" unique_id=1471750640]
+layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Label9" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer"]
-margin_left = 146.0
-margin_top = 145.0
-margin_right = 281.0
-margin_bottom = 159.0
+[node name="Label9" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer" unique_id=873443687]
+layout_mode = 2
 text = "Apply Slope Rotation:"
 
-[node name="applySlopeRotation" type="CheckBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer"]
-margin_left = 285.0
-margin_top = 140.0
-margin_right = 1008.0
-margin_bottom = 164.0
+[node name="applySlopeRotation" type="CheckBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer" unique_id=1259344447]
+layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="GridContainer2" type="GridContainer" parent="Tab/TrackObjects/Settings/Tab/Object Positioning"]
-margin_top = 108.0
-margin_right = 1008.0
-margin_bottom = 188.0
+[node name="GridContainer2" type="GridContainer" parent="Tab/TrackObjects/Settings/Tab/Object Positioning" unique_id=2129005701]
+layout_mode = 2
 columns = 4
 
-[node name="Label" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer2"]
-margin_top = 5.0
-margin_right = 114.0
-margin_bottom = 19.0
+[node name="Label" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer2" unique_id=2068080172]
+layout_mode = 2
 text = "Random Location:"
 
-[node name="CheckBoxRandLoc" type="CheckBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer2"]
-margin_left = 118.0
-margin_right = 142.0
-margin_bottom = 24.0
+[node name="CheckBoxRandLoc" type="CheckBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer2" unique_id=1702314688]
+layout_mode = 2
 
-[node name="Label6" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer2"]
-margin_left = 146.0
-margin_top = 5.0
-margin_right = 281.0
-margin_bottom = 19.0
+[node name="Label6" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer2" unique_id=709495147]
+layout_mode = 2
 text = "Max Moved Location:"
 
-[node name="RandomLocation" type="SpinBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer2"]
-margin_left = 285.0
-margin_right = 1008.0
-margin_bottom = 24.0
+[node name="RandomLocation" type="SpinBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer2" unique_id=919406330]
+layout_mode = 2
 size_flags_horizontal = 3
 step = 0.01
 allow_greater = true
 
-[node name="Label2" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer2"]
-margin_top = 33.0
-margin_right = 114.0
-margin_bottom = 47.0
+[node name="Label2" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer2" unique_id=468696947]
+layout_mode = 2
 text = "Random Rotation:"
 
-[node name="CheckBoxRandRot" type="CheckBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer2"]
-margin_left = 118.0
-margin_top = 28.0
-margin_right = 142.0
-margin_bottom = 52.0
+[node name="CheckBoxRandRot" type="CheckBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer2" unique_id=1425365845]
+layout_mode = 2
 
-[node name="Label4" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer2"]
-margin_left = 146.0
-margin_top = 33.0
-margin_right = 281.0
-margin_bottom = 47.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Label4" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer2" unique_id=705346786]
+layout_mode = 2
 
-[node name="Label5" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer2"]
-margin_left = 285.0
-margin_top = 33.0
-margin_right = 1008.0
-margin_bottom = 47.0
+[node name="Label5" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer2" unique_id=672527951]
+layout_mode = 2
 
-[node name="Label3" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer2"]
-margin_top = 61.0
-margin_right = 114.0
-margin_bottom = 75.0
+[node name="Label3" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer2" unique_id=668718184]
+layout_mode = 2
 text = "Random Scale:"
 
-[node name="CheckBoxRadScal" type="CheckBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer2"]
-margin_left = 118.0
-margin_top = 56.0
-margin_right = 142.0
-margin_bottom = 80.0
+[node name="CheckBoxRadScal" type="CheckBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer2" unique_id=1903056812]
+layout_mode = 2
 
-[node name="Label7" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer2"]
-margin_left = 146.0
-margin_top = 61.0
-margin_right = 281.0
-margin_bottom = 75.0
+[node name="Label7" type="Label" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer2" unique_id=1951926866]
+layout_mode = 2
 text = "Max Scale Factor:"
 
-[node name="RandomScale" type="SpinBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer2"]
-margin_left = 285.0
-margin_top = 56.0
-margin_right = 1008.0
-margin_bottom = 80.0
+[node name="RandomScale" type="SpinBox" parent="Tab/TrackObjects/Settings/Tab/Object Positioning/GridContainer2" unique_id=1178903793]
+layout_mode = 2
 size_flags_horizontal = 3
 step = 0.01
 allow_greater = true
 
-[node name="SaveAndUpdate" type="Button" parent="Tab/TrackObjects/Settings/Tab/Object Positioning"]
-margin_left = 483.0
-margin_top = 192.0
-margin_right = 524.0
-margin_bottom = 212.0
+[node name="SaveAndUpdate" type="Button" parent="Tab/TrackObjects/Settings/Tab/Object Positioning" unique_id=1168828033]
+layout_mode = 2
 size_flags_horizontal = 4
 text = "Save & Update"
 
-[node name="Randomize" type="Button" parent="Tab/TrackObjects/Settings/Tab/Object Positioning"]
-margin_left = 483.0
-margin_top = 192.0
-margin_right = 524.0
-margin_bottom = 212.0
+[node name="Randomize" type="Button" parent="Tab/TrackObjects/Settings/Tab/Object Positioning" unique_id=360504792]
+layout_mode = 2
 size_flags_horizontal = 4
 text = "Randomize"
 
-[node name="FileDialogObjects" type="FileDialog" parent="."]
-margin_top = 28.0
-margin_right = 1024.0
-margin_bottom = 158.0
-rect_min_size = Vector2( 600, 400 )
-popup_exclusive = true
-window_title = "Open a File"
-resizable = true
-mode = 0
-filters = PoolStringArray( "*.obj" )
+[node name="FileDialogObjects" type="FileDialog" parent="." unique_id=1874108138]
+filters = PackedStringArray("*.obj")
 show_hidden_files = true
 
-[node name="FileDialogMaterials" type="FileDialog" parent="."]
-margin_top = 28.0
-margin_right = 1024.0
-margin_bottom = 158.0
-rect_min_size = Vector2( 600, 400 )
-popup_exclusive = true
-window_title = "Open a File"
-resizable = true
-mode = 0
-filters = PoolStringArray( "*.tres" )
+[node name="FileDialogMaterials" type="FileDialog" parent="." unique_id=1858571531]
+filters = PackedStringArray("*.tres")
 show_hidden_files = true
 
-[connection signal="user_added_entry" from="Tab/TrackObjects/jListTrackObjects" to="." method="_on_jListTrackObjects_user_added_entry"]
-[connection signal="user_copied_entries" from="Tab/TrackObjects/jListTrackObjects" to="." method="_on_jListTrackObjects_user_copied_entries"]
-[connection signal="user_duplicated_entries" from="Tab/TrackObjects/jListTrackObjects" to="." method="_on_jListTrackObjects_user_duplicated_entries"]
-[connection signal="user_pasted_entries" from="Tab/TrackObjects/jListTrackObjects" to="." method="_on_jListTrackObjects_user_pasted_entries"]
-[connection signal="user_removed_entries" from="Tab/TrackObjects/jListTrackObjects" to="." method="_on_jListTrackObjects_user_removed_entries"]
-[connection signal="user_renamed_entry" from="Tab/TrackObjects/jListTrackObjects" to="." method="_on_jListTrackObjects_user_renamed_entry"]
-[connection signal="user_selected_entry" from="Tab/TrackObjects/jListTrackObjects" to="." method="_on_jListTrackObjects_user_selected_entry"]
 [connection signal="pressed" from="Tab/TrackObjects/Settings/Tab/Object/HBoxContainer/Pick" to="." method="_on_PickObject_pressed"]
-[connection signal="updated" from="Tab/TrackObjects/Settings/Tab/Object/BuildingSettings" to="." method="_on_BuildingSettings_updated"]
 [connection signal="pressed" from="Tab/TrackObjects/Settings/Tab/Position/WholeRail" to="." method="_on_AssignWholeRail_pressed"]
 [connection signal="pressed" from="Tab/TrackObjects/Settings/Tab/Position/SaveAndUpdate" to="." method="_on_SavePosition_pressed"]
 [connection signal="item_selected" from="Tab/TrackObjects/Settings/Tab/Object Positioning/OptionButton" to="." method="_on_OptionButton_item_selected"]

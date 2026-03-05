@@ -1,38 +1,34 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene format=3 uid="uid://d35joaqepdrhh"]
 
-[ext_resource path="res://Resources/Sounds/Acceleration6.ogg" type="AudioStream" id=1]
-[ext_resource path="res://Resources/Sounds/EngineIdle.ogg" type="AudioStream" id=2]
-[ext_resource path="res://Data/Scripts/AdvancedEngineSound.gd" type="Script" id=3]
-[ext_resource path="res://Resources/Sounds/Acceleration5.ogg" type="AudioStream" id=4]
-[ext_resource path="res://Resources/Sounds/AccelerationTransition2.ogg" type="AudioStream" id=5]
+[ext_resource type="AudioStream" uid="uid://dywdbrc4vj1ov" path="res://Resources/Sounds/Acceleration6.ogg" id="1"]
+[ext_resource type="AudioStream" uid="uid://b8cjp0r0a6wug" path="res://Resources/Sounds/EngineIdle.ogg" id="2"]
+[ext_resource type="Script" uid="uid://dohmu0sjt6ee6" path="res://Data/Scripts/AdvancedEngineSound.gd" id="3"]
+[ext_resource type="AudioStream" uid="uid://6tplrrbrc0hy" path="res://Resources/Sounds/Acceleration5.ogg" id="4"]
+[ext_resource type="AudioStream" uid="uid://dwwcj81fn4vxn" path="res://Resources/Sounds/AccelerationTransition2.ogg" id="5"]
 
-[node name="AdvancedEngineSound" type="Spatial"]
-pause_mode = 2
-script = ExtResource( 3 )
+[node name="AdvancedEngineSound" type="Node3D" unique_id=383567499]
+process_mode = 3
+script = ExtResource("3")
 acceleration_transition_length_in_ms = 200.0
 acceleration_transition_1_delta_length_in_ms = 200.0
 acceleration_transition_2_delta_length_in_ms = 200.0
 
-[node name="Idle" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource( 2 )
+[node name="Idle" type="AudioStreamPlayer3D" parent="." unique_id=1702677153]
+stream = ExtResource("2")
 unit_size = 3.0
 autoplay = true
-bus = "Game"
 
-[node name="Acceleration1" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource( 4 )
+[node name="Acceleration1" type="AudioStreamPlayer3D" parent="." unique_id=653218378]
+stream = ExtResource("4")
 unit_size = 3.0
 autoplay = true
-bus = "Game"
 
-[node name="Acceleration2" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource( 1 )
+[node name="Acceleration2" type="AudioStreamPlayer3D" parent="." unique_id=1478500036]
+stream = ExtResource("1")
 unit_size = 3.0
 autoplay = true
-bus = "Game"
 
-[node name="AccelerationTransition" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource( 5 )
-unit_db = -10.0
+[node name="AccelerationTransition" type="AudioStreamPlayer3D" parent="." unique_id=1837036398]
+stream = ExtResource("5")
+volume_db = -10.0
 unit_size = 3.0
-bus = "Game"

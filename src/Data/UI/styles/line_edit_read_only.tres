@@ -1,11 +1,11 @@
-[gd_resource type="StyleBoxFlat" format=2]
+[gd_resource type="StyleBoxFlat" format=3 uid="uid://c02it651gbcbc"]
 
 [resource]
-bg_color = Color( 0.588235, 0.588235, 0.588235, 1 )
+bg_color = Color(0.588235, 0.588235, 0.588235, 1)
 border_width_top = 4
-border_color = Color( 0.0862745, 0.313726, 0.431373, 1 )
+border_color = Color(0.0862745, 0.313726, 0.431373, 1)
 corner_detail = 1
-shadow_color = Color( 0, 0, 0, 0.501961 )
+shadow_color = Color(0, 0, 0, 0.501961)
 shadow_size = 1
-shadow_offset = Vector2( 0, 2 )
+shadow_offset = Vector2(0, 2)
 anti_aliasing = false

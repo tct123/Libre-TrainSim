@@ -1,17 +1,5 @@
-[gd_scene format=2]
+[gd_scene format=3 uid="uid://lkd7em0vqmrx"]
 
-[node name="Control" type="AcceptDialog"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -200.0
-margin_top = -54.5
-margin_right = 200.0
-margin_bottom = 54.5
-popup_exclusive = true
-window_title = "Information"
+[node name="Control" type="AcceptDialog" unique_id=287111377]
 dialog_text = "Please insert a valid unique mod name. Empty mod names are not allowed. Please note the automatic stripping of invalid characters."
 dialog_autowrap = true
-
-[connection signal="popup_hide" from="." to="." method="_on_Control_popup_hide"]

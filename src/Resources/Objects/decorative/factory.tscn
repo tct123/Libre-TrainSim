@@ -1,14 +1,6 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene format=3 uid="uid://0pxcbinfo5kr"]
 
-[ext_resource path="res://Resources/Materials/Wall_White.tres" type="Material" id=1]
-[ext_resource path="res://Resources/Materials/Beton.tres" type="Material" id=2]
-[ext_resource path="res://Resources/Materials/Roof.tres" type="Material" id=3]
-[ext_resource path="res://Resources/Materials/Wood_Dark.tres" type="Material" id=4]
-[ext_resource path="res://Resources/Objects/factory1.obj" type="ArrayMesh" id=5]
+[ext_resource type="ArrayMesh" uid="uid://cdjtnu37xrynt" path="res://Resources/Objects/factory1.obj" id="5"]
 
-[node name="Factory" type="MeshInstance"]
-mesh = ExtResource( 5 )
-material/0 = ExtResource( 3 )
-material/1 = ExtResource( 2 )
-material/2 = ExtResource( 1 )
-material/3 = ExtResource( 4 )
+[node name="Factory" type="MeshInstance3D" unique_id=1878718993]
+mesh = ExtResource("5")

@@ -1,76 +1,65 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene format=3 uid="uid://dhs1ql11inond"]
 
-[ext_resource path="res://Data/UI/RailMap.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Data/UI/map.gd" type="Script" id=2]
+[ext_resource type="PackedScene" path="res://Data/UI/RailMap.tscn" id="1"]
+[ext_resource type="Script" uid="uid://dq6jtoyiekw4q" path="res://Data/UI/map.gd" id="2"]
 
-[sub_resource type="ViewportTexture" id=1]
-viewport_path = NodePath("ViewportContainer/RailMap")
+[sub_resource type="ViewportTexture" id="1"]
+viewport_path = NodePath("SubViewportContainer/RailMap")
 
-[sub_resource type="ViewportTexture" id=2]
-viewport_path = NodePath("ViewportContainer/RailMap")
+[sub_resource type="ViewportTexture" id="2"]
+viewport_path = NodePath("SubViewportContainer/RailMap")
 
-[node name="Map" type="Control"]
+[node name="Map" type="Control" unique_id=1913604720]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource("2")
 
-[node name="ViewportContainer" type="ViewportContainer" parent="."]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1825238225]
 visible = false
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 stretch = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="RailMap" parent="ViewportContainer" instance=ExtResource( 1 )]
-size = Vector2( 1024, 600 )
+[node name="RailMap" parent="SubViewportContainer" unique_id=630098291 instance=ExtResource("1")]
 handle_input_locally = false
+size = Vector2i(1152, 648)
 render_target_update_mode = 0
 
-[node name="FullMap" type="Control" parent="."]
+[node name="FullMap" type="Control" parent="." unique_id=310113077]
+anchors_preset = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Background" type="ColorRect" parent="FullMap"]
+[node name="Background" type="ColorRect" parent="FullMap" unique_id=336247328]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-color = Color( 0.25098, 0.25098, 0.25098, 0.784314 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+color = Color(0.25098, 0.25098, 0.25098, 0.784314)
 
-[node name="RenderTexture" type="TextureRect" parent="FullMap"]
+[node name="RenderTexture" type="TextureRect" parent="FullMap" unique_id=318833017]
+clip_contents = true
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_clip_content = true
 mouse_filter = 2
-texture = SubResource( 1 )
-expand = true
+texture = SubResource("1")
+expand_mode = 1
 stretch_mode = 6
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="OverlayMap" type="TextureRect" parent="."]
+[node name="OverlayMap" type="TextureRect" parent="." unique_id=1169177220]
+layout_mode = 0
 anchor_right = 0.33
 anchor_bottom = 1.0
-mouse_filter = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-texture = SubResource( 2 )
-expand = true
+mouse_filter = 2
+texture = SubResource("2")
+expand_mode = 1
 stretch_mode = 6
-__meta__ = {
-"_edit_use_anchors_": false
-}

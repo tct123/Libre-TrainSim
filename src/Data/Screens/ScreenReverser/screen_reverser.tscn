@@ -1,57 +1,62 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene format=3 uid="uid://bvnw4g3ek2hml"]
 
-[ext_resource path="res://Data/Fonts/Oswald-Regular.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Data/Screens/ScreenReverser/screen_reverser.gd" type="Script" id=2]
+[ext_resource type="FontFile" uid="uid://daw5gktlfixpc" path="res://Data/Fonts/Oswald-Regular.ttf" id="1"]
+[ext_resource type="Script" uid="uid://f6p2hi72c10f" path="res://Data/Screens/ScreenReverser/screen_reverser.gd" id="2"]
 
-[sub_resource type="DynamicFont" id=1]
-size = 120
-font_data = ExtResource( 1 )
+[sub_resource type="FontFile" id="1"]
+fallbacks = Array[Font]([ExtResource("1")])
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
 
-[node name="Reverser" type="Control"]
-margin_right = 1200.0
-margin_bottom = 800.0
-script = ExtResource( 2 )
+[node name="Reverser" type="Control" unique_id=257223155]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1200.0
+offset_bottom = 800.0
+script = ExtResource("2")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=358118799]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+color = Color(0, 0, 0, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1470009648]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 50.0
+offset_left = 50.0
 alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Forward" type="Label" parent="VBoxContainer"]
-margin_top = 42.0
-margin_right = 1150.0
-margin_bottom = 221.0
+[node name="Forward" type="Label" parent="VBoxContainer" unique_id=392932323]
+layout_mode = 2
 size_flags_vertical = 6
-custom_fonts/font = SubResource( 1 )
+theme_override_fonts/font = SubResource("1")
 text = "FORWARD"
 uppercase = true
 
-[node name="Neutral" type="Label" parent="VBoxContainer"]
-margin_top = 310.0
-margin_right = 1150.0
-margin_bottom = 489.0
+[node name="Neutral" type="Label" parent="VBoxContainer" unique_id=282690272]
+layout_mode = 2
 size_flags_vertical = 6
-custom_fonts/font = SubResource( 1 )
+theme_override_fonts/font = SubResource("1")
 text = "NEUTRAL"
 uppercase = true
 
-[node name="Reverse" type="Label" parent="VBoxContainer"]
-margin_top = 578.0
-margin_right = 1150.0
-margin_bottom = 757.0
+[node name="Reverse" type="Label" parent="VBoxContainer" unique_id=2115800324]
+layout_mode = 2
 size_flags_vertical = 6
-custom_fonts/font = SubResource( 1 )
+theme_override_fonts/font = SubResource("1")
 text = "REVERSE"
 uppercase = true

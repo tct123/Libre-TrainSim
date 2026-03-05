@@ -1,15 +1,33 @@
-[gd_resource type="DynamicFont" load_steps=4 format=2]
+[gd_resource type="FontFile" script_class="AutoDynamicFont" format=3 uid="uid://demtoqa7e7v7k"]
 
-[ext_resource path="res://Data/Fonts/Oswald-Regular.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Data/Fonts/NotoSansJP-Regular.otf" type="DynamicFontData" id=2]
-[ext_resource path="res://Data/Fonts/AutoDynamicFont.gd" type="Script" id=3]
+[ext_resource type="FontFile" uid="uid://daw5gktlfixpc" path="res://Data/Fonts/Oswald-Regular.ttf" id="1"]
+[ext_resource type="FontFile" uid="uid://dfge8u6xnebt3" path="res://Data/Fonts/NotoSansJP-Regular.otf" id="2"]
+[ext_resource type="Script" uid="uid://0871mej44lqo" path="res://Data/Fonts/AutoDynamicFont.gd" id="3"]
 
 [resource]
-size = 17
-use_filter = true
-font_data = ExtResource( 1 )
-fallback/0 = ExtResource( 2 )
-script = ExtResource( 3 )
+fallbacks = Array[Font]([ExtResource("1"), ExtResource("2"), ExtResource("1"), ExtResource("2")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+script = ExtResource("3")
 desktop_size = 17
 mobile_size = 25
 debug_test_size = false
+size = 17
+use_filter = true
+font_data = ExtResource("1")
+fallback/0 = ExtResource("2")

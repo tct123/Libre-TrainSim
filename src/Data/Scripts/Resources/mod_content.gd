@@ -2,28 +2,28 @@ class_name ModContentDefinition
 extends Resource
 
 
-export (String) var unique_name: String = ""
-export (String) var display_name: String = ""
+@export var unique_name: String = ""
+@export var display_name: String = ""
 
-export (int) var version_major: int = 1
-export (int) var version_minor: int = 0
-export (int) var version_patch: int = 0
+@export var version_major: int = 1
+@export var version_minor: int = 0
+@export var version_patch: int = 0
 
 # example: { "unique_name": "example_mod", "version": ">=1.0.0" }
-export (Array, Dictionary) var depends_on: Array = []
+@export var depends_on: Array = [] # (Array, Dictionary)
 
-export (Array, String, DIR) var environment_folders: Array = []
-export (Array, String, DIR) var material_folders: Array = []
-export (Array, String, DIR) var music_folders: Array = []
-export (Array, String, DIR) var object_folders: Array = []
-export (Array, String, DIR) var persons_folders: Array = []
-export (Array, String, DIR) var rail_type_folders: Array = []
-export (Array, String, DIR) var signal_type_folders: Array = []
-export (Array, String, DIR) var sound_folders: Array = []
-export (Array, String, DIR) var texture_folders: Array = []
+@export var environment_folders: Array = [] # (Array, String, DIR)
+@export var material_folders: Array = [] # (Array, String, DIR)
+@export var music_folders: Array = [] # (Array, String, DIR)
+@export var object_folders: Array = [] # (Array, String, DIR)
+@export var persons_folders: Array = [] # (Array, String, DIR)
+@export var rail_type_folders: Array = [] # (Array, String, DIR)
+@export var signal_type_folders: Array = [] # (Array, String, DIR)
+@export var sound_folders: Array = [] # (Array, String, DIR)
+@export var texture_folders: Array = [] # (Array, String, DIR)
 
-export (Array, String, FILE, "*.tscn,*.scn") var trains: Array = []
-export (Array, String, FILE, "*.tscn,*.scn") var worlds: Array = []
+@export var trains: Array = [] # (Array, String, FILE, "*.tscn,*.scn")
+@export var worlds: Array = [] # (Array, String, FILE, "*.tscn,*.scn")
 
 
 func _init() -> void:

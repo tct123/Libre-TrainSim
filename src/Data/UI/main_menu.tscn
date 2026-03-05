@@ -1,281 +1,247 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene format=3 uid="uid://btj68788yjib8"]
 
-[ext_resource path="res://Data/UI/main_menu.gd" type="Script" id=1]
-[ext_resource path="res://Data/Fonts/FontIngame.tres" type="DynamicFont" id=2]
-[ext_resource path="res://Data/Fonts/FontMediumBold.tres" type="DynamicFont" id=3]
-[ext_resource path="res://Data/UI/styles/button_left.tres" type="Theme" id=4]
-[ext_resource path="res://Data/UI/styles/button_right.tres" type="Theme" id=5]
-[ext_resource path="res://Data/UI/play_menu.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Data/UI/Content.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Editor/editor_configuration.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Data/UI/about.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Data/Fonts/FontIngame_Small.tres" type="DynamicFont" id=10]
-[ext_resource path="res://Resources/Music/follow-that-dream-by-luca-fraula-from-filmmusic-io.ogg" type="AudioStream" id=11]
-[ext_resource path="res://screenshot.png" type="Texture" id=12]
-[ext_resource path="res://Data/UI/styles/panel_popup.tres" type="StyleBox" id=13]
-[ext_resource path="res://Editor/Modules/scenario_editor_selection.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Data/UI/translated_rich_rext_label.gd" type="Script" id=15]
-[ext_resource path="res://Data/Misc/banner/lts_banner_version.png" type="Texture" id=16]
-[ext_resource path="res://Data/UI/blur_less.tres" type="Material" id=17]
+[ext_resource type="Script" uid="uid://dvk7u6mv8pac1" path="res://Data/UI/main_menu.gd" id="1"]
+[ext_resource type="FontFile" path="res://Data/Fonts/FontIngame.tres" id="2"]
+[ext_resource type="FontFile" path="res://Data/Fonts/FontMediumBold.tres" id="3"]
+[ext_resource type="Theme" path="res://Data/UI/styles/button_left.tres" id="4"]
+[ext_resource type="Theme" path="res://Data/UI/styles/button_right.tres" id="5"]
+[ext_resource type="PackedScene" path="res://Data/UI/play_menu.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://bhh6dqqerun4d" path="res://Data/UI/Content.tscn" id="7"]
+[ext_resource type="PackedScene" path="res://Editor/editor_configuration.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://bjkd60042rfi3" path="res://Data/UI/about.tscn" id="9"]
+[ext_resource type="FontFile" path="res://Data/Fonts/FontIngame_Small.tres" id="10"]
+[ext_resource type="AudioStream" uid="uid://mcu4xy1nfvdl" path="res://Resources/Music/follow-that-dream-by-luca-fraula-from-filmmusic-io.ogg" id="11"]
+[ext_resource type="Texture2D" uid="uid://ba2maceyefsqq" path="res://screenshot.png" id="12"]
+[ext_resource type="PackedScene" path="res://Editor/Modules/scenario_editor_selection.tscn" id="14"]
+[ext_resource type="Script" uid="uid://bmtcdd8b11k5d" path="res://Data/UI/translated_rich_rext_label.gd" id="15"]
+[ext_resource type="Texture2D" uid="uid://c5dosgf0la371" path="res://Data/Misc/banner/lts_banner_version.png" id="16"]
+[ext_resource type="Material" path="res://Data/UI/blur_less.tres" id="17"]
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=795450451]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 1 )
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=734316508]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 12 )
-expand = true
+texture = ExtResource("12")
+expand_mode = 1
 stretch_mode = 7
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="ColorRect" type="ColorRect" parent="."]
-material = ExtResource( 17 )
+[node name="ColorRect" type="ColorRect" parent="." unique_id=550947343]
+material = ExtResource("17")
+layout_mode = 0
 anchor_bottom = 1.0
-margin_right = 363.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+offset_right = 363.0
 
-[node name="Version" type="Label" parent="."]
+[node name="Version" type="Label" parent="." unique_id=818598537]
+layout_mode = 0
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -76.0
-margin_top = -26.0
-margin_right = -8.0
-margin_bottom = -8.0
+offset_left = -76.0
+offset_top = -26.0
+offset_right = -8.0
+offset_bottom = -8.0
 grow_horizontal = 0
 grow_vertical = 0
-custom_fonts/font = ExtResource( 10 )
+theme_override_fonts/font = ExtResource("10")
 text = "Version: 0.0"
-align = 2
-valign = 2
+horizontal_alignment = 2
+vertical_alignment = 2
 
-[node name="LabelMusic" type="Label" parent="."]
+[node name="LabelMusic" type="Label" parent="." unique_id=691369420]
+layout_mode = 0
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 8.0
-margin_top = -26.0
-margin_right = 86.0
-margin_bottom = -8.0
+offset_left = 8.0
+offset_top = -26.0
+offset_right = 86.0
+offset_bottom = -8.0
 grow_vertical = 0
-custom_fonts/font = ExtResource( 10 )
+theme_override_fonts/font = ExtResource("10")
 text = "MENU_MUSIC:"
-valign = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
+vertical_alignment = 2
 
-[node name="Buttons" type="VBoxContainer" parent="."]
+[node name="Buttons" type="VBoxContainer" parent="." unique_id=123888735]
+layout_mode = 0
 anchor_bottom = 1.0
-margin_left = 21.0
-margin_top = -1.05945
-margin_right = 323.0
-margin_bottom = -1.05945
-theme = ExtResource( 5 )
+offset_left = 21.0
+offset_top = -1.05945
+offset_right = 323.0
+offset_bottom = -1.05945
+theme = ExtResource("5")
 alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="Buttons"]
-margin_top = 34.0
-margin_right = 328.0
-margin_bottom = 194.0
-rect_min_size = Vector2( 0, 160 )
-texture = ExtResource( 16 )
-expand = true
+[node name="TextureRect" type="TextureRect" parent="Buttons" unique_id=1322628972]
+custom_minimum_size = Vector2(0, 160)
+layout_mode = 2
+texture = ExtResource("16")
+expand_mode = 1
 stretch_mode = 6
 
-[node name="Play" type="Button" parent="Buttons"]
-margin_top = 198.0
-margin_right = 328.0
-margin_bottom = 247.0
+[node name="Play" type="Button" parent="Buttons" unique_id=761475103]
+layout_mode = 2
 size_flags_horizontal = 3
 text = "MENU_PLAY"
 
-[node name="Content" type="Button" parent="Buttons"]
-margin_top = 251.0
-margin_right = 328.0
-margin_bottom = 300.0
+[node name="Content" type="Button" parent="Buttons" unique_id=1031001541]
+layout_mode = 2
 size_flags_horizontal = 3
 text = "MENU_CONTENT"
 
-[node name="Create" type="Button" parent="Buttons"]
-margin_top = 304.0
-margin_right = 328.0
-margin_bottom = 353.0
+[node name="Create" type="Button" parent="Buttons" unique_id=533067759]
+layout_mode = 2
 size_flags_horizontal = 3
 text = "MENU_CREATE"
 
-[node name="Settings" type="Button" parent="Buttons"]
-margin_top = 357.0
-margin_right = 328.0
-margin_bottom = 406.0
+[node name="Settings" type="Button" parent="Buttons" unique_id=1968355484]
+layout_mode = 2
 size_flags_horizontal = 3
 text = "MENU_SETTINGS"
 
-[node name="About" type="Button" parent="Buttons"]
-margin_top = 410.0
-margin_right = 328.0
-margin_bottom = 459.0
+[node name="About" type="Button" parent="Buttons" unique_id=1727334983]
+layout_mode = 2
 size_flags_horizontal = 3
 text = "MENU_ABOUT"
 
-[node name="Feedback" type="Button" parent="Buttons"]
-margin_top = 463.0
-margin_right = 328.0
-margin_bottom = 512.0
-grow_horizontal = 0
+[node name="Feedback" type="Button" parent="Buttons" unique_id=204571911]
+layout_mode = 2
 text = "MENU_FEEDBACK_WANTED"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Quit" type="Button" parent="Buttons"]
-margin_top = 516.0
-margin_right = 328.0
-margin_bottom = 565.0
+[node name="Quit" type="Button" parent="Buttons" unique_id=351713380]
+layout_mode = 2
 size_flags_horizontal = 3
 text = "MENU_QUIT"
 
-[node name="CreateMenu" type="VBoxContainer" parent="."]
+[node name="CreateMenu" type="VBoxContainer" parent="." unique_id=1217445133]
 visible = false
+layout_mode = 0
 anchor_bottom = 1.0
-margin_left = 21.0
-margin_top = -1.0
-margin_right = 349.0
-margin_bottom = -1.0
-theme = ExtResource( 5 )
+offset_left = 21.0
+offset_top = -1.0
+offset_right = 349.0
+offset_bottom = -1.0
+theme = ExtResource("5")
 alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Back" type="Button" parent="CreateMenu"]
-margin_top = 222.0
-margin_right = 328.0
-margin_bottom = 271.0
+[node name="Back" type="Button" parent="CreateMenu" unique_id=747051803]
+layout_mode = 2
 size_flags_horizontal = 3
 text = "MENU_BACK"
 
-[node name="TrackEditor" type="Button" parent="CreateMenu"]
-margin_top = 275.0
-margin_right = 328.0
-margin_bottom = 324.0
+[node name="TrackEditor" type="Button" parent="CreateMenu" unique_id=39889811]
+layout_mode = 2
 size_flags_horizontal = 3
 text = "TRACK_EDITOR"
 
-[node name="ScenarioEditor" type="Button" parent="CreateMenu"]
-margin_top = 328.0
-margin_right = 328.0
-margin_bottom = 377.0
+[node name="ScenarioEditor" type="Button" parent="CreateMenu" unique_id=1214046457]
+layout_mode = 2
 size_flags_horizontal = 3
 text = "SCENARIO_EDITOR"
 
-[node name="Play" parent="." instance=ExtResource( 6 )]
+[node name="Play" parent="." unique_id=1728284230 instance=ExtResource("6")]
 visible = false
-margin_left = 12.0
-margin_top = 12.0
-margin_right = -12.0
-margin_bottom = -12.0
+layout_mode = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
 
-[node name="About" parent="." instance=ExtResource( 9 )]
+[node name="About" parent="." unique_id=1286568540 instance=ExtResource("9")]
 visible = false
-margin_left = 12.0
-margin_top = 12.0
-margin_right = -12.0
-margin_bottom = -12.0
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
 
-[node name="Content" parent="." instance=ExtResource( 7 )]
+[node name="Content" parent="." unique_id=1621923716 instance=ExtResource("7")]
 visible = false
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 
-[node name="TrackEditorSelection" parent="." instance=ExtResource( 8 )]
+[node name="TrackEditorSelection" parent="." unique_id=480568445 instance=ExtResource("8")]
 visible = false
-margin_left = 12.0
-margin_top = 12.0
-margin_right = -12.0
-margin_bottom = -12.0
+anchors_preset = 0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
 
-[node name="ScenarioEditorSelection" parent="." instance=ExtResource( 14 )]
+[node name="ScenarioEditorSelection" parent="." unique_id=2121754639 instance=ExtResource("14")]
 visible = false
-margin_left = 12.0
-margin_top = 12.0
-margin_right = -12.0
-margin_bottom = -12.0
+layout_mode = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
 
-[node name="Feedback" type="WindowDialog" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -227.5
-margin_top = -80.5
-margin_right = 227.5
-margin_bottom = 80.5
-custom_constants/close_h_ofs = 28
-custom_constants/scaleborder_size = 41
-custom_fonts/title_font = ExtResource( 3 )
-custom_styles/panel = ExtResource( 13 )
-window_title = "Feedback"
-resizable = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Feedback" type="Window" parent="." unique_id=1540496512]
+oversampling_override = 1.0
+position = Vector2i(0, 36)
+theme_override_constants/close_h_offset = 28
+theme_override_fonts/title_font = ExtResource("3")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Feedback"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Feedback" unique_id=522415874]
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 8.0
-margin_right = -6.0
-margin_bottom = -4.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+offset_left = 6.0
+offset_top = 8.0
+offset_right = -6.0
+offset_bottom = -4.0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Feedback/VBoxContainer"]
-margin_right = 443.0
-margin_bottom = 111.0
+[node name="RichTextLabel" type="RichTextLabel" parent="Feedback/VBoxContainer" unique_id=1111773470]
+layout_mode = 2
 size_flags_vertical = 3
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-custom_fonts/normal_font = ExtResource( 2 )
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2")
 text = "MENU_FEEDBACK_QUESTION"
-script = ExtResource( 15 )
+script = ExtResource("15")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Feedback/VBoxContainer"]
-margin_top = 115.0
-margin_right = 443.0
-margin_bottom = 149.0
+[node name="HBoxContainer" type="HBoxContainer" parent="Feedback/VBoxContainer" unique_id=245462890]
+layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Later" type="Button" parent="Feedback/VBoxContainer/HBoxContainer"]
-margin_right = 208.0
-margin_bottom = 34.0
+[node name="Later" type="Button" parent="Feedback/VBoxContainer/HBoxContainer" unique_id=341415573]
+layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource( 4 )
-custom_fonts/font = ExtResource( 2 )
+theme = ExtResource("4")
+theme_override_fonts/font = ExtResource("2")
 text = "MENU_LATER"
-align = 0
 
-[node name="OpenWebBrowser" type="Button" parent="Feedback/VBoxContainer/HBoxContainer"]
-margin_left = 212.0
-margin_right = 443.0
-margin_bottom = 34.0
+[node name="OpenWebBrowser" type="Button" parent="Feedback/VBoxContainer/HBoxContainer" unique_id=515443043]
+layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource( 5 )
-custom_fonts/font = ExtResource( 2 )
+theme = ExtResource("5")
+theme_override_fonts/font = ExtResource("2")
 text = "MENU_OPEN_IN_BROWSER"
-align = 2
 
-[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 11 )
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=663186794]
+stream = ExtResource("11")
 volume_db = -25.384
 autoplay = true
-bus = "Music"
 
 [connection signal="pressed" from="Buttons/Play" to="." method="_on_PlayFront_pressed"]
 [connection signal="pressed" from="Buttons/Content" to="." method="_on_Content_pressed"]

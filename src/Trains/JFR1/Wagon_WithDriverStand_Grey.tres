@@ -1,17 +1,14 @@
-[gd_resource type="SpatialMaterial" load_steps=3 format=2]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://y5j2ipxvgpji"]
 
-[ext_resource path="res://Trains/JFR1/Wagon_WithDriverStand_grey_albedo.png" type="Texture" id=1]
-[ext_resource path="res://Trains/JFR1/Wagon_WithDriverStand_grey_amr.png" type="Texture" id=2]
+[ext_resource type="Texture2D" uid="uid://crtecpx5xbq30" path="res://Trains/JFR1/Wagon_WithDriverStand_grey_albedo.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://bv8l22d3s4xji" path="res://Trains/JFR1/Wagon_WithDriverStand_grey_amr.png" id="2"]
 
 [resource]
-albedo_texture = ExtResource( 1 )
+albedo_texture = ExtResource("1")
 metallic = 1.0
-metallic_texture = ExtResource( 2 )
+metallic_texture = ExtResource("2")
 metallic_texture_channel = 1
-roughness_texture = ExtResource( 2 )
+roughness_texture = ExtResource("2")
 roughness_texture_channel = 2
 ao_enabled = true
-ao_light_affect = 0.0
-ao_texture = ExtResource( 2 )
-ao_on_uv2 = false
-ao_texture_channel = 0
+ao_texture = ExtResource("2")
